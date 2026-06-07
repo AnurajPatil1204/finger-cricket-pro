@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Stadium-inspired sports Immersive theme */
+body {
+  font-family: var(--font-sans);
+  background-color: #020617; /* Slate 950 base */
+  color: #f1f5f9;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Dynamic Stadium Pitch Background Layer */
+.stadium-bg {
+  background: radial-gradient(circle at 50% 120%, #064e3b 0%, #020617 75%);
+}
+
+/* Carbon fibre overlay for realistic sports texture */
+.carbon-overlay {
+  background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+  opacity: 0.15;
+}
+
+/* Custom indicator glows */
+.emerald-neon-shadow {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.35);
+}
+
+.indigo-neon-shadow {
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
+}
+
+.amber-neon-shadow {
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.25);
+}
+
+/* Elegant custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(51, 65, 85, 0.8);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Touch/Click active pulse and slide animation for gesture keypads */
+@keyframes button-pulse-slide-em {
+  0% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+  }
+  30% {
+    transform: translateY(-8px) scale(0.96);
+    box-shadow: 0 0 16px 8px rgba(16, 185, 129, 0.25);
+  }
+  100% {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2);
+  }
+}
+
+.animate-pulse-slide-emerald {
+  animation: button-pulse-slide-em 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes button-pulse-slide-ind {
+  0% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.6);
+  }
+  30% {
+    transform: translateY(-8px) scale(0.96);
+    box-shadow: 0 0 16px 8px rgba(99, 102, 241, 0.25);
+  }
+  100% {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.2);
+  }
+}
+
+.animate-pulse-slide-indigo {
+  animation: button-pulse-slide-ind 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+

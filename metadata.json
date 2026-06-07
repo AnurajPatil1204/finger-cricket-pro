@@ -1,0 +1,6 @@
+{
+  "name": "Finger Cricket",
+  "description": "A single-player Hand Cricket game with an intuitive UI, toss phase, scoreboard, and realistic match logic against an AI opponent.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
